@@ -1,0 +1,29 @@
+lc 397. Integer Replacement
+
+
+class Solution {
+    public int integerReplacement(int n) {
+        long nn=n;
+        int step=0;
+        while(nn>1)
+        {
+            if(nn%2==0)
+            {
+                nn/=2;
+            }
+            else
+            {
+                if(nn==3||nn%4==1)
+                {
+                    nn--;
+                }
+                else
+                {
+                    nn++;
+                }
+            }
+            step+=1;
+        }
+        return step;
+    }
+}
